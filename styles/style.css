@@ -23,6 +23,9 @@ a:active {color: blue}
 
 .top {background-color: #374151;padding: 0 15px}
 .content {padding: 0}
+.h-padding {padding: 0 15px}
+.v-padding {padding: 15px 0}
+.info {background-color: #15374b; padding: 15px 15px 15px 250px}
 
 ul {list-style-type:none;padding:0;margin:0}
 ul li {padding:8px}
@@ -40,6 +43,7 @@ article {padding: 15px}
 
 @media (max-width:800px) {
  p, li {font-size: 1.2em;}
+ .info {padding: 15px 15px 15px 130px}
 }
 
 .adver_adup {display: block}
