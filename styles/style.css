@@ -13,7 +13,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin
 .right{float:right!important}
 
 body {background-color: #1f2937;color:#f3f4f6;}
-p {margin-top: 1.2em;margin-bottom: 1.2em;font-size: 15px;}
+p {text-align: justify}
 hr {margin:20px -16px;}
 
 a:link {color: #08f7f5;text-decoration: none}
@@ -31,7 +31,16 @@ ul {list-style-type:none;padding:0;margin:0}
 ul li {padding:8px}
 ul li:last-child {border-bottom:none}
 
-footer {text-align: center; padding: 15px}
+table {width:100%}
+table, th, td {border: 1px solid black; border-collapse: collapse}
+th {padding: 10px; text-align: center}
+td {padding: 5px; text-align: center;}
+table.zebra tr:nth-child(even) {background-color: #333}
+table.zebra tr:nth-child(odd) {background-color: #666}
+table.zebra th {background-color: #666; color: white}
+tr.small8 {font-size: .8em}
+
+footer {text-align: center; padding: 15px; font-size: .7em}
 
 .adver {background-color: red;text-align:center; float:right!important}
 

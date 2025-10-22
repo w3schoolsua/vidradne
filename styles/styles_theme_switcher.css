@@ -1,0 +1,106 @@
+/* --- Глобальні Стилі та Переходи --- */
+body {
+    font-family: sans-serif; /* Використовуємо стандартний системний шрифт */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Важливо: додаємо плавність переходу для всіх кольорів */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ========================================================== */
+/* Змінні та Стилі для СВІТЛОЇ ТЕМИ (Default)       */
+/* ========================================================== */
+:root {
+    --bg-primary: #f0f4f8; /* Світло-сірий фон сторінки */
+    --bg-secondary: #ffffff; /* Білий фон карток/заголовка */
+    --text-primary: #1e293b; /* Темний текст */
+    --border-color: #e2e8f0; /* Світла межа */
+    --shadow-color: rgba(0, 0, 0, 0.05); /* Легка тінь */
+    --icon-color: #3b82f6; /* Колір іконки (синій) */
+}
+
+/* Застосування змінних до елементів */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* ========================================================== */
+/* Змінні та Стилі для ТЕМНОЇ ТЕМИ                */
+/* ========================================================== */
+/* Активуються, коли JS додає клас 'dark' до тегу <html> */
+html.dark {
+    --bg-primary: #1f2937; /* Темно-сірий фон сторінки */
+    --bg-secondary: #374151; /* Трохи світліший фон карток */
+    --text-primary: #f3f4f6; /* Світлий текст */
+    --border-color: #4b5563; /* Темна межа */
+    --shadow-color: rgba(255, 255, 255, 0.08); /* Світла тінь */
+    --icon-color: #fcd34d; /* Колір іконки (жовтий) */
+}
+
+
+/* --- Стилі для Заголовка --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: background-color 0.4s ease, border-bottom-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* --- Стилі для Перемикача --- */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.theme-icon-img {
+    width: 28px;
+    height: 28px;
+    /* Фільтр дозволяє забарвити монохромний SVG у колір змінної --icon-color */
+    filter: drop-shadow(0 0 0.5px var(--icon-color));
+    transition: filter 0.4s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+}
+
+html.dark .theme-toggle:hover {
+    background-color: #4b5563;
+}
+
+
+/* --- Стилі для Контенту --- */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Адаптивність для десктопів */
+@media (min-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
