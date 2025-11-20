@@ -52,6 +52,7 @@ article {padding: 15px}
 
 @media (max-width:800px) {
  p, li {font-size: 1.2em;}
+ p {text-align: left}
  .info {padding: 15px 15px 15px 130px}
 }
 
