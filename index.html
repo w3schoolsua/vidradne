@@ -3,42 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <title>Відрадне Чарівне. Життя Білокуракинщини. Архів матеріалів</title>
-    <meta name='description' content='Відрадне. Новини. Події. Історія. Архівні матеріали'>
-    <link rel='stylesheet' href='styles/normalize.css'>
-    <link rel='stylesheet' href='styles/style.css'>
+    <title>Головна — Відрадне Чарівне. Архівний сайт</title>
+    <meta name='description' content='Архів новин, публікацій та статей із газети Життя Білокуракинщини, Білокуракине, Луганська обл. Україна'>
+    <meta name="keywords" content="архів, публікації, новини, газета, життя, білокуракинщини, селище, білокуракине, білокуракинський, район, луганська">
+    <link rel="canonical" href="index.html">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <!-- Автоматичне визначення теми - прибрати миготіння -->
+    <script>
+        (function() {
+            const saved = localStorage.getItem("theme");
+            if (saved) {
+                document.documentElement.setAttribute("data-theme", saved);
+                return;
+            }
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+        })();
+    </script>
 </head>
-<body>
-    <div class="top">
-        <h1 class="center">Відрадне Чарівне</h1>
-        <h3 class="center">Архів матеріалів</h3>
-    </div>
-    <div class="content">
 
-        <div class="card1">
-            <h4>Рік виходу:</h4>
-            <ul>
-                <li><a href="2012/2012jb.html">2012</a></li>
-                <li><a href="2013/2013jb.html">2013</a></li>
-                <li><a href="2014/2014jb.html">2014</a></li>
-                <li><a href="2015/2015jb.html">2015</a></li>
-                <li><a href="2016/2016jb.html">2016</a></li>
-                <li><a href="2017/2017jb.html">2017</a></li>
-                <li><a href="2018/2018jb.html">2018</a></li>
-                <li><a href="2019/2019jb.html">2019</a></li>
-                <li><a href="2020/2020jb.html">2020</a></li>
-                <li><a href="2021/2021jb.html">2021</a></li>
-                <li><a href="2022/2022jb.html">2022</a></li>
-            </ul>
-        </div>
+<body>
+<header class="top-header">
+    <button class="burger-btn" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+    <a href="index.html" class="logo-block">
+        <img src="img/logo.svg" class="logo-img" alt="Logo">
+        <span class="site-title">Відрадне Чарівне</span>
+    </a>
+    <button id="themeToggle" class="theme-toggle" title="Перемикач теми">🌙</button>
+</header>
+
+<nav class="main-nav" id="mainNav">
+    <a href="index.html" class="active">Головна</a>
+    <a href="category-jb.html">Архів ЖБ</a>
+    <a href="category-news.html">Новини</a>
+    <a href="category-articles.html">Статті</a>
+    <a href="category-video.html">Відео</a>
+    <a href="category-photo.html">Фото</a>
+    <a href="category-ads.html">Оголошення</a>
+    <a href="category-creat.html">Творчість</a>
+    <a href="about.html">Про сайт</a>
+</nav>
+
+<div class="adver_adup">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- adup_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="5050829044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="archive-layout">
+    <aside class="archive-sidebar">
+        <h2>Архів ЖБ</h2>
+        <a href="2022/jb/2022-jb.html"><div class="year-item">2022</div></a>
+        <a href="2021/jb/2021-jb.html"><div class="year-item">2021</div></a>
+        <a href="2020/jb/2020-jb.html"><div class="year-item">2020</div></a>
+        <a href="2019/jb/2019-jb.html"><div class="year-item">2019</div></a>
+        <a href="2018/jb/2018-jb.html"><div class="year-item">2018</div></a>
+        <a href="2017/jb/2017-jb.html"><div class="year-item">2017</div></a>
+        <a href="2016/jb/2016-jb.html"><div class="year-item">2016</div></a>
+        <a href="2015/jb/2015-jb.html"><div class="year-item">2015</div></a>
+        <a href="2014/jb/2014-jb.html"><div class="year-item">2014</div></a>
+        <a href="2013/jb/2013-jb.html"><div class="year-item">2013</div></a>
+        <a href="2012/jb/2012-jb.html"><div class="year-item">2012</div></a>
+        <a href="2011/jb/2011-jb.html"><div class="year-item">2011</div></a>
+        <a href="2010/jb/2010-jb.html"><div class="year-item">2010</div></a>
+    </aside>
+
+    <!-- КОНТЕНТ КАТЕГОРІЇ -->
+    <main class="archive-content">
+        <h2 class="center">Інформація</h2>
         <div class="info">
-            <p>На даному сайті зібрані інформаційні матеріали про селище Відрадне (колишнє Білокуракине) Луганської області, Україна. Матеріали зібрані із різних відкритих джерел, зокрема із місцевої газети "Життя Білокуракинщини", веб-сайтів місцевих органів влади, груп соціальних мереж (Facebook), YouTube (відео), інших джерел.</p>
-            <p>Також на сайті зібрані різні історичні матеріали про селище Відрадне (Білокуракине) та інші населені пункти (села, селища), Білокуракинський район (Сватівський район, Білокуракинська громада).</p>
-            <p>В розділі <a href="tvorchist-zemliakiv.html">Творчість земляків</a> можна ознайомитись із творчістю місцевих авторів - письменників, поетів, публіцистів.</p>
+            <p>На даному сайті зібрані інформаційні матеріали про селище Відрадне (колишнє Білокуракине) Луганської області, Україна. Матеріали зібрані із різних відкритих джерел, зокрема із місцевої газети "Життя Білокуракинщини", вебсайтів місцевих органів влади, груп соціальних мереж (Facebook), YouTube (відео), інших відкритих та доступних джерел.</p>
+            <p>Також на сайті зібрані різні історичні матеріали про селище Відрадне (Білокуракине) та інші населені пункти (села, селища), про Білокуракинський район (Сватівський район, Білокуракинська громада) Луганської області України.</p>
+            <p>В розділі <a href="category-creat.html">Творчість білокуракинців</a> можна ознайомитись із творчістю місцевих авторів - письменників, поетів, публіцистів.</p>
             <p>Інформаційні ресурси даного сайту є загальнодоступними та дозволені для вільного використання з посиланням на джерело.</p>
             <p>Сайт рекомендується для використання як довідник для істориків, краєзнавців і всіх, хто цікавиться життям мешканців Білокуракинської громади Луганської області.</p>
-            <p>Додаткові матеріали, які можуть бути цікавими історикам та етнографам:</p>
+            <p>Додаткові матеріали про Білокуракинщину, які можуть бути цікаві публіцистам, історикам, етнографам, краєзнавцям:</p>
             <ul>
                 <li><a href="https://drive.google.com/file/d/1zH6pTM64eDX3ASSWfPq3WQAuAiuI09K7/view?usp=drive_link" target="blank">Жизнь князя Бориса Ивановича Куракина (оригінал) PDF</a></li>
                 <li><a href="https://docs.google.com/document/d/15zDaLcfrdMDB5dyw0WZacSabolAaAWnt/edit?usp=drive_link&ouid=107594404689461055640&rtpof=true&sd=true" target="blank">Жизнь князя Бориса Ивановича Куракина (оригінал) DOCX</a></li>
@@ -46,37 +89,52 @@
                 <li><a href="https://docs.google.com/document/d/1z7bEUO6XGHUnMf69nuTPyJucae4Ttii5/edit?usp=drive_link&ouid=107594404689461055640&rtpof=true&sd=true" target="blank">Життя князя Бориса Івановича Куракіна (укр. літ. переклад) DOCX</a></li>
                 <li><a href="https://docs.google.com/document/d/1eI79rXuv6Yk9aGkzhUQ4iA-uAoMzStkS/edit?usp=drive_link&ouid=107594404689461055640&rtpof=true&sd=true" target="blank">Судьба архива князя Куракина, DOCX</a></li>
             </ul>
-            <p>Матеріали додаються поступово.</p>
+            <p><b>Зверніть увагу!</b> Матеріали на сайт додаються поступово. Тому деякі посилання можуть тимчасово не працювати!</p>
         </div>
+    </main>
+</div>
 
-        <div class="card2"><p>Місце для реклами</p>
-            <div class="adver_adinarticle">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6358227327561384" data-ad-slot="1121788057"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
+<div class="adver_addown">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
+    <!-- addown_gorizontal -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6358227327561384" data-ad-slot="7281891662" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-        <div class="card3"><p>Місце для реклами</p>
-            <div class="adver_adinfeed">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6358227327561384" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5o+cq-k-pl+1ar" data-ad-client="ca-pub-6358227327561384" data-ad-slot="2302652563"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
-
+<!-- Футер на 4 колонки -->
+<footer class="site-footer footer-4col">
+    <div class="footer-col">
+        <div class="footer-title">Навігація</div>
+        <a href="index.html">Головна</a>
+        <a href="category-news.html">Новини</a>
+        <a href="category-articles.html">Статті</a>
     </div>
 
-    <footer>
-        <br><br>
-        <hr>
-        Copyright 2012-2022 by WebSunsey. All Rights Reserved. Сайт створений і працює на <a href="https://pages.github.com" target="blank" rel="nofollow noopener">GitHub Pages</a>.<br>
-        Ви можете використовувати ресурси сайту на власний розсуд безкоштовно як довідковий матеріал. Матеріали сайту для некомерційного використання.<br>
-        Друзі сайту: <a href="https://w3schoolsua.github.io" target="blank" rel="nofollow noopener">W3Schools українською</a> |
-        <a href="https://w3schoolsua.github.io/hyperskillua/index.html">Hyperskill українською</a> |
-        <a href="https://developer.mozilla.org/en-US/?retiredLocale=uk" target="blank" rel="nofollow noopener">MDNWebDocs</a> |
-        <a href="https://whatwg.org" target="blank" rel="nofollow noopener">WHATWG</a> |
-        <a href="https://www.w3.org" target="blank" rel="nofollow noopener">W3C</a>
-    </footer>
+    <div class="footer-col">
+        <div class="footer-title">Навігація</div>
+        <a href="category-jb.html">Архів ЖБ</a>
+        <a href="category-video.html">Відео</a>
+        <a href="category-photo.html">Фото</a>
+    </div>
+
+    <div class="footer-col">
+        <div class="footer-title">Інформація</div>
+        <a href="about.html">Про сайт</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="license.html">Ліцензія</a>
+    </div>
+
+    <div class="footer-col">
+        <div class="footer-title">Сайт</div>
+        <div>© <span id="yearRange"></span></div>
+        <div>Відрадне Чарівне</div>
+        <div><span id="updatedInfo"></span></div>
+    </div>
+</footer>
+
+<!-- Кнопка підняття вгору -->
+<button id="scrollTopBtn" class="scroll-top-btn" title="Нагору">↑</button>
+
+<script defer src="scripts/all-scripts.js"></script>
 </body>
 </html>

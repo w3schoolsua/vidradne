@@ -31,9 +31,9 @@ h1 {font-size: 2em;margin: 0.67em 0}
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
 }
 
 /*
@@ -55,9 +55,8 @@ a {background-color: transparent}
  * 2. Додайте правильне оформлення тексту в Chrome, Edge, IE, Opera та Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
 }
 
 /* Додайте правильну товщину шрифту в Chrome, Edge та Safari. */
@@ -68,7 +67,7 @@ b, strong {font-weight: bolder}
  * 2. Виправлено непарний розмір шрифту `em` у всіх браузерах.
  */
 code, kbd, samp {
-  font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+    font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
 
 /* Додайте правильний розмір шрифту у всіх браузерах. */
 small {font-size: 80%}
@@ -109,7 +108,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+    -webkit-appearance: button;
 }
 
 /* Видаліть внутрішню рамку та відступи у Firefox. */
@@ -133,7 +132,7 @@ legend {box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; 
 
 /* Додайте правильне вертикальне вирівнювання в Chrome, Firefox та Opera. */
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 /* Видаліть вертикальну смугу прокручування за замовчуванням в IE 10+. */
@@ -164,7 +163,7 @@ textarea {overflow: auto}
 ::-webkit-file-upload-button {-webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
 
 /* Інтерактивний
-   ========================================================================== */
+   ============================================================= */
 
 /* Додайте правильне відображення в Edge, IE 10+ та Firefox. */
 details {display: block}
@@ -173,7 +172,7 @@ details {display: block}
 summary {display: list-item}
 
 /* Інше
-   ========================================================================== */
+   ============================================================= */
 
 /* Додайте правильний display в IE 10+. */
 template {display: none}
