@@ -62,18 +62,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Скрипт для кнопки підняття вгору
-    document.addEventListener("DOMContentLoaded", () => {
-    const scrollBtn = document.getElementById("scrollTopBtn");
+        document.addEventListener("DOMContentLoaded", () => {
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        let hideTimeout;
 
-    window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-    scrollBtn.classList.add("show");
-} else {
-    scrollBtn.classList.remove("show");
-}
-});
-
-    scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-});
+        function showButton() {
+        if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+    }
+    }
+        function hideButton() {
+        scrollBtn.classList.remove("show");
+    }
+        window.addEventListener("scroll", () => {
+        showButton();
+        // кожен скрол скидає таймер приховування
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+        hideButton();
+    }, 1200); // через 1.2 сек після завершення скролу
+    });
+        scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    });
