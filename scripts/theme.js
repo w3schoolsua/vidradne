@@ -1,21 +1,10 @@
-/* Перемикач теми світла-темна */
-const toggle = document.getElementById("themeToggle");
-
-function applyTheme() {
-    const theme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", theme);
-    if (toggle) {
-        toggle.textContent = theme === "dark" ? "☀️" : "🌙";
-    }
+/* Автоматичне визначення теми - прибрати миготіння - на початку перед стилями */
+    (function() {
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+    document.documentElement.setAttribute("data-theme", saved);
+    return;
 }
-
-if (toggle) {
-    toggle.addEventListener("click", () => {
-        const current = localStorage.getItem("theme") || "light";
-        const next = current === "light" ? "dark" : "light";
-        localStorage.setItem("theme", next);
-        applyTheme();
-    });
-}
-
-applyTheme();
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+})();

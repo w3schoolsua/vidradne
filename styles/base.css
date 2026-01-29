@@ -33,7 +33,7 @@ a:visited {color: var(--link-visited)}
 .burger-btn.open span:nth-child(3) {transform: translateY(-9px) rotate(-45deg)}
 
 /* ГОРИЗОНТАЛЬНЕ МЕНЮ */
-.main-nav {display: flex;gap: 10px;padding: 8px 16px;background: var(--nav-bg);border-bottom: 1px solid var(--border);z-index: 200}
+.main-nav {display: flex;gap: 10px;padding: 8px 16px;background: var(--nav-bg);border-bottom: 1px solid var(--border);border-top: 1px solid var(--border);z-index: 200}
 .main-nav a {padding: 6px 10px;border-radius: 999px;color: var(--nav-link)}
 .main-nav a:hover {background: var(--nav-link-bg-hover);color: var(--nav-link-hover)}
 
@@ -50,7 +50,8 @@ a:visited {color: var(--link-visited)}
 /* FIX flex overflow */
 
 /* САЙДБАР */
-.archive-sidebar {width: 260px;background: var(--sidebar-bg);border-radius: 12px;padding: 16px;box-shadow: 0 2px 6px rgba(0,0,0,0.08)}
+.archive-sidebar {width: 260px;background: var(--sidebar-bg);border-radius: 12px;padding: 5px;box-shadow: 0 2px 6px rgba(0,0,0,0.08)}
+.archive-sidebar h2 {padding: 0 15px}
 
 /* На великих екранах — sticky */
 @media (min-width: 901px) {.archive-sidebar {position: sticky;top: 90px;max-height: calc(100vh - 110px);overflow-y: auto}}
@@ -76,9 +77,10 @@ a:visited {color: var(--link-visited)}
 .post-list-item-excerpt {font-size: 0.95rem;color: var(--text-muted)}
 
 /* На мобільних — прибираємо верхній відступ, зменшуємо padding */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
     .archive-layout {padding: 5px;margin-top: 0;flex-direction: column;}
     .archive-content {padding: 5px}
+    .archive-sidebar {width: 100%}
 }
 
 /* ФУТЕР */

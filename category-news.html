@@ -7,8 +7,6 @@
     <meta name='description' content='Новини селища Відрадне, Луганська обл. Україна'>
     <meta name="keywords" content="новини, відрадне, чарівне, відраднівська, відраднівський, білокуракине, білокуракинський, район, селище, луганська">
     <link rel="canonical" href="category-news.html">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/theme.css">
     <!-- Автоматичне визначення теми - прибрати миготіння -->
     <script>
         (function() {
@@ -21,11 +19,13 @@
             document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
         })();
     </script>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/theme.css">
 </head>
 
 <body>
 <header class="top-header">
-    <button class="burger-btn" id="burgerBtn">
+    <button class="burger-btn" id="burgerBtn" aria-label="Меню">
         <span></span><span></span><span></span>
     </button>
     <a href="index.html" class="logo-block">
