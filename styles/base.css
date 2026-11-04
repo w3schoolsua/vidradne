@@ -64,7 +64,7 @@ a:visited {color: var(--link-visited)}
 /* Меню ліворуч */
 .menu-item {padding: 6px 8px;border-radius: 6px;margin-bottom: 4px}
 .menu-item:hover {background: var(--accent-bg)}
-.menu-item-active {background: var(--accent-bg);font-weight: 600}
+.menu-item-active {padding: 6px 8px;border-radius: 6px;margin-bottom: 4px; background: var(--accent-bg);font-weight: 600}
 
 /* КОНТЕНТ */
 .archive-content {flex: 1;background: var(--content-bg);border-radius: 12px;padding: 5px 15px;box-shadow: 0 2px 6px rgba(0,0,0,0.06)}
